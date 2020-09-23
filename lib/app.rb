@@ -10,14 +10,16 @@ class Palindrome
   
   def input=(input)
     @input = input
+  end  
 
   def reverse()
     reverse_array = []
     array = @input.split("")
     index = array.length  
-    array.each do |index -=1|
+    array.downto do |index|
       reverse_array.push(index)
+      puts reverse_array
     end
-    return reverse_array
+    return reverse_array.join("")
   end
 end      
